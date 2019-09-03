@@ -1,3 +1,3 @@
 # SlideUpView
-An iOS feature
+An iOS feature developed in Swift
 
