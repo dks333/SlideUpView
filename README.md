@@ -1,3 +1,3 @@
 # SlideUpView
-## slide
+An iOS feature
 
