@@ -11,11 +11,6 @@ import Foundation
 
 class SlideView: UIView {
     
-    // Init your Slide View here
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
