@@ -8,3 +8,6 @@ An iOS feature developed in Swift
 
 
 ## Usage
+
+You can edit this following in SlideViewConstant:
++ `slideViewHeight`
