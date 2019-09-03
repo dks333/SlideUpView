@@ -19,10 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cw1-pf-Pgq">
-                                <rect key="frame" x="172" y="275" width="47" height="30"/>
-                                <state key="normal" title="Switch"/>
+                                <rect key="frame" x="190" y="288" width="34" height="30"/>
+                                <state key="normal" title="Slide">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="filter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQX-Kt-goa"/>
+                                    <action selector="slide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ed-Eg-tur"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-cJ-1mj">
@@ -33,10 +35,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cw1-pf-Pgq" secondAttribute="bottom" constant="557" id="KVc-D4-Tzt"/>
-                            <constraint firstItem="Cw1-pf-Pgq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="VX5-xr-D54"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cw1-pf-Pgq" secondAttribute="trailing" constant="195" id="fkB-UB-a32"/>
-                            <constraint firstItem="Cw1-pf-Pgq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="231" id="zgF-AL-9gU"/>
+                            <constraint firstItem="Cw1-pf-Pgq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TPE-nr-yTN"/>
+                            <constraint firstItem="Cw1-pf-Pgq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-150" id="f4i-ms-w4a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

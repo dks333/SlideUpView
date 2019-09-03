@@ -6,15 +6,46 @@
 //  Copyright © 2019 Kaishan Ding. All rights reserved.
 //
 
+/* MIT License
+ 
+ Copyright (c) [year] [fullname]
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ */
+
 import UIKit
+
+//MARK: Edit your constant here
+struct SlideViewConstant {
+    static let slideViewHeight: CGFloat = 350
+    static let cornerRadiusOfSlideView: CGFloat = 20
+    static let animationTime: CGFloat = 0.3
+    
+}
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var slideUpView: UIView!
+    @IBOutlet weak var slideUpView: SlideView!
     @IBOutlet weak var slideUpBtn: UIButton!
     
     let blackView = UIView()
-    let animationTime = CGFloat(0.3)
+    let animationTime = SlideViewConstant.animationTime
     var originalCenterOfslideUpView = CGFloat()
     var totalDistance = CGFloat()
     
@@ -25,9 +56,9 @@ class ViewController: UIViewController {
     
     
     private func setupView(){
-        slideUpView.frame = CGRect(x: 0, y: self.view.bounds.height, width: self.view.bounds.width, height: 350)
+        slideUpView.frame = CGRect(x: 0, y: self.view.bounds.height, width: self.view.bounds.width, height: SlideViewConstant.slideViewHeight)
         slideUpView.layoutIfNeeded()
-        slideUpView.addDropShadow(cornerRadius: 40)
+        slideUpView.addDropShadow(cornerRadius: SlideViewConstant.cornerRadiusOfSlideView)
         
         blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         blackView.frame = self.view.frame
@@ -40,13 +71,13 @@ class ViewController: UIViewController {
         slideUpView.addGestureRecognizer(downPan)
     }
     
-    //Animation when user interacts with the filter view
+    //Animation when user interacts with the slide view
     @objc func dismissslideUpView(_ gestureRecognizer:UIPanGestureRecognizer) {
         let translation = gestureRecognizer.translation(in: self.slideUpView)
         switch gestureRecognizer.state{
         case .began, .changed:
             //Pan gesture began and continued
-            //print(gestureRecognizer.view!.frame.origin.y + self.slideUpView.bounds.height)
+
             gestureRecognizer.view!.center = CGPoint(x: self.slideUpView.center.x, y: max(gestureRecognizer.view!.center.y + translation.y, originalCenterOfslideUpView))
             gestureRecognizer.setTranslation(CGPoint.zero, in: self.slideUpView)
             totalDistance += translation.y
@@ -81,13 +112,13 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func filter(_ sender: Any) {
+    @IBAction func slide(_ sender: Any) {
         totalDistance = 0
-        slideUpView.frame = CGRect(x: 0, y: self.view.bounds.height, width: self.view.bounds.width, height: 350)
+        slideUpView.frame = CGRect(x: 0, y: self.view.bounds.height, width: self.view.bounds.width, height: SlideViewConstant.slideViewHeight)
         UIView.animate(withDuration: TimeInterval(animationTime), animations: {
             self.blackView.alpha = 1
             self.slideUpView.backgroundColor = UIColor.white
-            self.slideUpView.layer.cornerRadius = 20
+            self.slideUpView.layer.cornerRadius = SlideViewConstant.cornerRadiusOfSlideView
             self.slideUpView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             self.slideUpBtn.isHidden = true
         }, completion: nil)

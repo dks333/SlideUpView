@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185559B1231E2CD200E1FF3A /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185559B0231E2CD200E1FF3A /* SlideView.swift */; };
 		189815F9231E220C006D3E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189815F8231E220C006D3E54 /* AppDelegate.swift */; };
 		189815FB231E220C006D3E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189815FA231E220C006D3E54 /* ViewController.swift */; };
 		189815FE231E220C006D3E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189815FC231E220C006D3E54 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185559B0231E2CD200E1FF3A /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		189815F5231E220C006D3E54 /* SlideUpView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideUpView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189815F8231E220C006D3E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189815FA231E220C006D3E54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185559B2231E2CDC00E1FF3A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				189815F8231E220C006D3E54 /* AppDelegate.swift */,
+				18981602231E220D006D3E54 /* Assets.xcassets */,
+				18981604231E220D006D3E54 /* LaunchScreen.storyboard */,
+				189815FF231E220C006D3E54 /* SlideUpView.xcdatamodeld */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		189815EC231E220C006D3E54 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +69,11 @@
 		189815F7231E220C006D3E54 /* SlideUpView */ = {
 			isa = PBXGroup;
 			children = (
-				189815F8231E220C006D3E54 /* AppDelegate.swift */,
 				189815FA231E220C006D3E54 /* ViewController.swift */,
+				185559B0231E2CD200E1FF3A /* SlideView.swift */,
 				189815FC231E220C006D3E54 /* Main.storyboard */,
-				18981602231E220D006D3E54 /* Assets.xcassets */,
-				18981604231E220D006D3E54 /* LaunchScreen.storyboard */,
 				18981607231E220D006D3E54 /* Info.plist */,
-				189815FF231E220C006D3E54 /* SlideUpView.xcdatamodeld */,
+				185559B2231E2CDC00E1FF3A /* New Group */,
 			);
 			path = SlideUpView;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			files = (
 				18981601231E220C006D3E54 /* SlideUpView.xcdatamodeld in Sources */,
 				189815FB231E220C006D3E54 /* ViewController.swift in Sources */,
+				185559B1231E2CD200E1FF3A /* SlideView.swift in Sources */,
 				189815F9231E220C006D3E54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
